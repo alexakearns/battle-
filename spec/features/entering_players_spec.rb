@@ -2,10 +2,7 @@
 
 feature 'Entering players ' do
   scenario 'player enters name and sees on screen' do 
-    visit('/')
-    fill_in 'first_name', with: 'Gina'
-    fill_in 'second_name', with: 'Alexa'
-    click_button 'go'
+    sign_in_and_play
     expect(page).to have_content "Gina VS Alexa"
   end 
 end 

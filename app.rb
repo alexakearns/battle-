@@ -22,6 +22,12 @@ get '/play' do
   erb :play
 end
 
+get '/attack' do
+  @first_name = session[:first_name]
+  @second_name = session[:second_name]
+  erb :attack
+end 
+
   run! if app_file == $0
 
 end
