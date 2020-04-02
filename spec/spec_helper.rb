@@ -16,11 +16,13 @@
 
 ENV['RACK_ENV'] = 'test'
 require File.join(File.dirname(__FILE__),'..', 'app.rb')
-require 'capybara'
-require 'capybara/rspec'
-require 'rspec'
+# same as require_relative ‘../app.rb’ 
 
-capybara.app = Battle
+require 'capybara'
+require 'rspec'
+require 'capybara/rspec'
+
+Capybara.app = Battle
 #require "./config/environment"
 
 RSpec.configure do |config|
