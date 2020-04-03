@@ -24,9 +24,9 @@ get '/play' do
 end
 
 get '/attack' do
-  @first_name = $player_1.name
-  @second_name = $player_2.name
-  @player_2_score = $player_2.take_damage
+  @first_name = $player_1
+  @second_name = $player_2
+  @first_name.attack(@second_name)
   erb :attack
 end
 
