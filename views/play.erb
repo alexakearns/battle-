@@ -1,6 +1,6 @@
-<h2> <%=@first_name.name%> VS <%=@second_name.name%> </h2>
+<h2> <%=@first_name%> VS <%=@second_name%> </h2>
 
-<h3> <%=@first_name.name%>  = <%= @first_name.player_score%> : <%=@second_name.name%> = <%= @second_name.player_score%> </h3>
+<h3> <%=@first_name%>  = <%= @player_1_score%> : <%=@second_name%> = <%= @player_2_score%> </h3>
 
 <form action="/attack">
   <input type="submit" value="Attack">
