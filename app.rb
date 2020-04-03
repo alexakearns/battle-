@@ -13,21 +13,22 @@ post '/names' do
   $player_1 = Player.new(params[:first_name])
   $player_2 = Player.new(params[:second_name])
   redirect '/play'
-end 
+end
 
 get '/play' do
   @first_name = $player_1.name
   @second_name = $player_2.name
-  @player_1_score = 100
-  @player_2_score = 100
+  @player_1_score = $player_1.player_score
+  @player_2_score = $player_2.player_score
   erb :play
 end
 
 get '/attack' do
   @first_name = $player_1.name
   @second_name = $player_2.name
+  @player_2_score = $player_2.take_damage
   erb :attack
-end 
+end
 
   run! if app_file == $0
 
